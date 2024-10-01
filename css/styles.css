@@ -175,6 +175,17 @@ a {
 .benefits-list {
   width: calc((100% - 3 * 24px) / 4);
 }
+.benefits-item-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 264px;
+  height: 112px;
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+  background-color: #f4f4fd;
+  margin-bottom: 8px;
+}
 .benefits-title-list {
   font-weight: 500;
   font-size: 20px;
@@ -281,8 +292,26 @@ a {
 .portfolio-list-item {
   width: calc((100% - 48px) / 3);
 }
-.portfolio-photo-cashless {
+.portfolio-img {
   position: relative;
+  overflow: hidden;
+}
+.portfolio-overlay {
+  position: absolute;
+  top: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #f4f4fd;
+  padding: 40px 32px;
+  width: 100%;
+  height: 100%;
+  background-color: #4d5ae5;
+  transform: translateY(100%);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.portfolio-list-item:hover .portfolio-overlay {
+  transform: translateY(0%);
 }
 .portfolio-card {
   padding: 32px 16px;
@@ -290,14 +319,6 @@ a {
   border-left: 1px solid #e7e9fc;
   border-right: 1px solid #e7e9fc;
   border-top: none;
-}
-.description-cashless-payment {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #4d5ae5;
 }
 .title-list-portfolio {
   font-weight: 500;
@@ -313,6 +334,17 @@ a {
 .page-footer {
   background: #2e2f42;
   padding: 100px 0;
+}
+.footer-container {
+  display: flex;
+  width: 1158px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px;
+  align-items: baseline;
+}
+.footer-logo {
+  margin-right: 120px;
 }
 .logo-footer {
   display: inline-block;
@@ -337,4 +369,33 @@ a {
   color: #f4f4fd;
   max-width: 264px;
 }
+.footer-social-description {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0, 02em;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+.footer-social-list {
+  display: flex;
+  column-gap: 12px;
+  margin-top: 16px;
+}
+.footer-social-link {
+  display: flex;
+  justify-content: center;
+  line-height: 0;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #4d5ae5;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.footer-social-link:hover,
+.footer-social-link:focus {
+  background-color: #31d0aa;
+}
+
 /* /Footer Styles */
